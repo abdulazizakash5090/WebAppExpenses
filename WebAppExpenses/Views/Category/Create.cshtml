@@ -1,0 +1,44 @@
+﻿@model WebAppExpenses.Models.AddCategoryViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+           <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center text-primary">Add Category</h2>
+                </div>
+               <div class="card-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <form method="post" action="Create">
+                        <div class="form-group">
+                            <label for="" class="form-label">Name</label>
+                            <input type="text" class="form-control" asp-for="Name" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                            <div class="form-group">
+                            <label for="" class="form-label">Amount</label>
+                            <input type="number" class="form-control" asp-for="Amount" />
+                            <span asp-validation-for="Amount" class="text-danger"></span>
+                        </div>
+                            <div class="form-group">
+                            <label for="" class="form-label">From Date</label>
+                            <input type="date" class="form-control" asp-for="FromDate" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="form-label">To Date</label>
+                            <input type="date" class="form-control" asp-for="ToDate" />
+                        </div>
+                        <br />
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+               </div>
+        </div>
+    </div>
+</div>
+</div>
+
